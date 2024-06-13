@@ -1,28 +1,177 @@
-Requirements
-General
-Allowed editors: vi, vim, emacs
-All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
-All your files should end with a new line
-A README.md file, at the root of the folder of the project is mandatory
-Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
-You are not allowed to use global variables
-No more than 5 functions per file
-In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
-The prototypes of all your functions should be included in your header file called main.h
-Don’t forget to push your header file
-All your header files should be include guarded
-Note that we will not provide the _putchar function for this project
-Authorized functions and macros
-write (man 2 write)
-malloc (man 3 malloc)
-free (man 3 free)
-va_start (man 3 va_start)
-va_end (man 3 va_end)
-va_copy (man 3 va_copy)
-va_arg (man 3 va_arg)
-Compilation
-Your code will be compiled this way:
-$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
-As a consequence, be careful not to push any c file containing a main function in the root directory of your project (you could have a test folder containing all your tests files including main functions)
-Our main files will include your main header file (main.h): #include main.h
-You might want to look at the gcc flag -Wno-format when testing with your _printf and the standard printf.
+_printf()
+The printf project is a project by Pauline Wairimu
+
+This function named "_printf()" imitates the actual "printf()" command located in the stdio.h library of C programming Language. It contains some of the basic features and functions found in the manual 3 of "printf".
+
+_printf() is a function that performs formatted output conversion and print data. Its prototype is the following:
+
+  int _printf(const char *format, ...) 
+Where format contains the string that is printed.
+
+_printf() is a variadic function, it can receives n arguments that replace by n tags written inside the string.
+
+The format tags prototype is the following:
+
+%[flags][length]specifier
+If the program runs successfully, the return value is the amount of chars printed.
+
+File Functions
+_printf.c
+Own Printf Function That Performs Formatted Output Conversion And Print Data.
+
+holberton.h
+Header File Where All Prototypes Are Saved.
+
+get_print_func.c
+Pointer To A Function That Selects The Correct Function To Perform The Operation.
+
+print_buf.c
+Function That Prints The Buffer.
+
+handl_buf.c
+Function That Concatenates The Buffer Characters.
+
+print_chr.c
+Function That Writes The Character C To Stdout.
+
+/* Indetifier : %c */
+
+print_str.c
+Function That Writes The String To Stdout.
+
+/* Indetifier : %s */
+
+print_int.c
+Function That Prints An Integer.
+
+/* Indetifier : %i or %d */
+
+print_bnr.c
+Function That Prints Decimal In Binary.
+
+/* Indetifier : %b */
+
+print_oct.c
+Function That Prints Decimal In Octal.
+
+/* Indetifier : %o */
+
+print_hex.c
+Function That Prints Decimal In Hexadecimal.
+
+/* Indetifier : %x */
+
+print_upx.c
+Function That Prints Decimal In Uppercase Hexadecimal.
+
+/* Indetifier : %X */
+
+print_usr.c
+Function That Prints A String And Values Of Non-Printed Chars.
+
+/* Indetifier : %S */
+
+print_unt.c
+Function That Prints An Unsigned Integer.
+
+/* Indetifier : %u */
+
+print_rev.c
+Function That Writes The String To Stdout In Reverse.
+
+/* Indetifier : %r */
+
+print_rot.c
+Function That Writes The String To Stdout In Rot13.
+
+/* Indetifier : %R */
+
+print_add.c
+Function That Prints The Address Of An Input Variable.
+
+/* Indetifier : %p */
+
+print_long_oct.c
+Function That Prints Long Decimal Number In Octal.
+
+/* Indetifier : %lo */
+
+print_long_hex.c
+Function That Prints Long Decimal Number In Hexadecimal.
+
+/* Indetifier : %lx */
+
+print_long_int.c
+Function That Prints A Long Integer.
+
+/* Indetifier : %li */
+
+print_long_upx.c
+Function That Prints A Long Decimal In Uppercase Hexadecimal.
+
+/* Indetifier : %lX */
+
+print_long_unt.c
+Function That Prints A Long Unsigned Integer.
+
+/* Indetifier : %lu */
+
+print_short_oct.c
+Function That Prints Short Decimal Number In Octal.
+
+/* Indetifier : %ho */
+
+print_short_hex.c
+Function That Prints Short Decimal Number In Hexadecimal.
+
+/* Indetifier : %hx */
+
+print_short_int.c
+Function That Prints A Short Integer.
+
+/* Indetifier : %hi */
+
+print_short_upx.c
+Function That Prints A Short Decimal In Uppercase Hexadecimal.
+
+/* Indetifier : %hX */
+
+print_short_unt.c
+Function That Prints A Short Unsigned Integer.
+
+/* Indetifier : %hu */
+
+print_num_hex.c
+Function That Print A Number In Hexadecimal Begining With 0 And x.
+
+/* Indetifier : %#x */
+
+print_num_oct.c
+Function That Prints A Number In Octal Begining With 0 And o.
+
+/* Indetifier : %#o */
+
+print_num_upx.c
+Function That Prints A Number In Uppercase Hexadecimal.
+
+/* Indetifier : %#X */
+
+print_plus_int.c
+Function That Prints An Integer With Plus Symbol.
+
+/* Indetifier : %+i */
+
+print_space_int.c
+Function That Prints An Integer Begining With 0 And u.
+
+/* Indetifier : % i */
+
+ev_print_func.c
+Function That Returns The Amount Of Indetifiers.
+
+Author
+Pauline Wairimu
+
+End
+Pauline Wairimu @ ALX software engineering programme 2024
+
